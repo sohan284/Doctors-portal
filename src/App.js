@@ -6,10 +6,13 @@ import Home from './Pages/Home/Home';
 
 function App() {
   return (
-    <div className="App">
+    <div className='bg-white'> 
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/apoinment' element={<Home></Home>}></Route>
+        <Route path='/about' element={<Home></Home>}></Route>
+        <Route path='/review' element={<Home></Home>}></Route>
       </Routes>
     </div>
   );
