@@ -6,7 +6,7 @@ import PrimaryButton from '../../Shared/PrimaryButton';
 const MakeAppoinment = () => {
     return (
       <section style={{background: `url(${appoinment})`}} className='flex justify-center mt-10 items-center text-white'> 
-          <div  className='flex-1 hidden lg:block md:block'>
+          <div  className='flex-1 hidden lg:block md:block p-3'>
               <img className='mt-[-100px]' src={doctor} alt="" />
           </div>
           <div className='flex-1'>
