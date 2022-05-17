@@ -1,9 +1,12 @@
 import React from 'react';
+import Appoinment from './MakeAppoinment';
 import Banner from './Banner';
 import Banner2 from './Banner2';
 import Info from './Info';
 import info from './Info';
 import Services from './Services';
+import Testimonial from './Testimonial';
+import Contact from './Contact';
 
 const Home = () => {
     return (
@@ -14,6 +17,9 @@ const Home = () => {
            <h1 className='text-center text-4xl text-black mb-7'>Service We Provide</h1>
            <Services></Services>
            <Banner2></Banner2>
+           <Appoinment></Appoinment>
+           <Testimonial></Testimonial>
+           <Contact></Contact>
            
         </div>
     );

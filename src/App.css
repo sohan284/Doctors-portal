@@ -1,5 +1,12 @@
-.App {
-  text-align: center;
+.bg-doctors{
+  background-color: rgb(2, 207, 207);
+}
+.text-doctors{
+  color:  rgb(2, 207, 207);
+}
+.reviewImg{
+  border: 2px solid #04afdf;
+  border-radius: 50px;
 }
 
 .App-logo {
