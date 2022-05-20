@@ -1,6 +1,8 @@
+
 import { format } from 'date-fns';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from './../../firebase.init';
 
 const BookingModal = ({setTreatment, treatment, date }) => {
@@ -20,8 +22,24 @@ const BookingModal = ({setTreatment, treatment, date }) => {
             patientName: user.displayName,
             phone: event.target.phone.value
         }
-        console.log(_id,name,slot);
-        setTreatment(null);
+        fetch('http://localhost:5000/booking', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.success){
+            alert(`Appointment is set, ${formattedDate} at ${slot}`)
+        }
+        else{
+            alert(`Already have and appointment on ${data.booking?.date} at ${data.booking?.slot}`)
+        }
+            setTreatment(null);
+        });
     }
     return (
         <div>
