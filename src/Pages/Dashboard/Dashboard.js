@@ -17,6 +17,7 @@ const Dashboard = () => {
       {/* <!-- Sidebar content here --> */}
       <li className='text-doctors font-bold'><Link to="/dashboard" >My Appointments</Link></li>
       <li className='text-doctors font-bold'><Link to="myreview" >My Reviews</Link></li>
+      <li className='text-doctors font-bold'><Link to="history" >My History</Link></li>
       
     </ul>
   

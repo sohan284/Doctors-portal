@@ -17,10 +17,10 @@ const MyAppointment = () => {
         <div>
             <h2>my appointment  {appointments.length} </h2>
             <div class="overflow-x-auto">
-  <table class="table text-white  w-full">
+  <table class="table text-white border-2  w-full">
     <thead>
       <tr>
-        
+        <th>No</th>
         <th>Name</th>
         <th>Date</th>
         <th>Time</th>
@@ -29,12 +29,12 @@ const MyAppointment = () => {
     </thead>
     <tbody>
         {
-            appointments.map(a=>  <tr>
-                
-                <td>{a.patientName}</td>
-                <td>{a.date}</td>
-                <td>{a.slot}</td>
-                <td>{a.treatment}</td>
+            appointments.map((a,index)=>  <tr>
+                <td className='bg-white text-black'>{index + 1}</td>
+                <td className='bg-white text-black'>{a.patientName}</td>
+                <td className='bg-white text-black'>{a.date}</td>
+                <td className='bg-white text-black'>{a.slot}</td>
+                <td className='bg-white text-black'>{a.treatment}</td>
               </tr>)
         }
       
