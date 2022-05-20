@@ -1,8 +1,6 @@
-
 import { format } from 'date-fns';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
 import auth from './../../firebase.init';
 
 const BookingModal = ({setTreatment, treatment, date }) => {
@@ -13,6 +11,7 @@ const BookingModal = ({setTreatment, treatment, date }) => {
     const handleBooking = event =>{
         event.preventDefault();
         const slot = event.target.slot.value;
+        
         const booking = {
             treatmentId: _id,
             treatment: name,
