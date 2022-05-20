@@ -29,15 +29,15 @@ const Testimonial = () => {
     return (
         <section className='mt-20'>
            <div className='flex justify-between'>
-           <div>
-                <h1 className='text-doctors  ml-5'>Testimonial</h1>
-                <h1 className='text-2xl text-black  ml-5'>What Our Patients Says</h1>
+           <div className='w-full'>
+                <h1 className='text-doctors text-center ml-5'>Testimonial</h1>
+                <h1 className='text-2xl text-center text-black  ml-5'>What Our Patients Says</h1>
             </div>
             <div>
                 <img className='lg:w-48' src={qoute} alt="" />
             </div>
            </div>
-           <div className='grid grid-cols-3 ml-5 gap-5'>
+           <div className='grid lg:grid-cols-3 justify-center md:grid-cols-2 sm:grid-cols-1 ml-5 gap-5'>
                {
                    reviews.map(review => <Reviews img={review.img} review={review.review} name={review.name}></Reviews>)
                }
